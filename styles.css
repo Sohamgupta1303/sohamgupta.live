@@ -127,8 +127,10 @@ a {
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(260px, 0.78fr) minmax(320px, 1fr);
-  gap: clamp(28px, 5vw, 64px);
+  grid-template-columns: minmax(260px, 380px) minmax(360px, 1fr);
+  max-width: 1040px;
+  margin: 0 auto;
+  gap: clamp(28px, 4.5vw, 56px);
   align-items: center;
 }
 
@@ -147,7 +149,6 @@ h2 {
 }
 
 .lead {
-  max-width: 640px;
   margin-bottom: 18px;
   color: #203238;
   font-size: clamp(1.32rem, 2.3vw, 1.9rem);
@@ -170,10 +171,22 @@ h2 {
   aspect-ratio: 4 / 5;
 }
 
+.about-copy {
+  border: 1px solid var(--line);
+  border-left: 8px solid var(--sea);
+  border-radius: 8px;
+  padding: clamp(24px, 3vw, 34px);
+  background: rgba(255, 253, 244, 0.76);
+}
+
 .about-copy p,
 .projects-panel p {
   color: var(--muted);
   font-size: 1.12rem;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
 }
 
 .section-heading {
@@ -406,6 +419,10 @@ h2 {
   .contact-grid,
   .project-list {
     grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    max-width: 560px;
   }
 }
 
